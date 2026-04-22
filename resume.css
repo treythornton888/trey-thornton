@@ -1,0 +1,80 @@
+/* General Page Styling */
+body {
+    background-color: #f0f8ff; /* Lightest blue background */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    margin: 0;
+}
+
+/* The Main Container Card */
+.main-container {
+    background-color: #bcd9ea; /* Soft blue card background */
+    width: 100%;
+    max-width: 800px;
+    border-radius: 40px; /* Large rounded corners */
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Header Information */
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-info {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Button Navigation Styling */
+.nav-buttons {
+    margin: 25px 0;
+}
+
+.btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* The Content Box (Education Section) */
+.content-box {
+    background-color: #bcd9ea;
+    border: 3px solid #000; /* Thick dark border */
+    border-radius: 25px;
+    padding: 30px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.content-box h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #555;
+    padding-bottom: 10px;
+}
+
+.entry {
+    margin-top: 20px;
+}
+
+.date {
+    font-style: italic;
+    color: #666;
+}

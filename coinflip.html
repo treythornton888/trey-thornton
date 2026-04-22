@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MJ's Championship Coin Flip</title>
+    <style>
+        /* General Page Styling (Matching your gray background) */
+        body {
+            background-color: #9e9797;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+        }
+
+        /* Heading Style from your LeBron reference */
+        h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        /* The Main Container (Matching the Purple/Red boxes in your photos) */
+        .game-container {
+            background-color: #ba0c2f; /* Bulls Red - like your LeBron box */
+            width: 90%;
+            max-width: 800px;
+            border: 3px solid #000;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* The "Coin" Area */
+        .coin-box {
+            background-color: #231f20; /* Bulls Black */
+            border: 2px solid #ffcd00; /* Gold Border */
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 70px;
+            color: #ffcd00;
+            transition: transform 0.6s;
+            box-shadow: 0 0 15px rgba(255, 205, 0, 0.4);
+        }
+
+        /* Result Text */
+        #result-display {
+            font-size: 1.5rem;
+            color: #ffcd00; /* Gold text to pop against Red/Black */
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        /* The Green Button (Matching your "Back to Me" button) */
+        .flip-btn {
+            background-color: #28a745; 
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: transform 0.2s;
+        }
+
+        .flip-btn:hover {
+            transform: scale(1.05);
+            background-color: #218838;
+        }
+
+        /* Navigation Link */
+        .back-link {
+            margin-top: 30px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>MJ vs. The Odds</h1>
+
+    <div class="game-container">
+        <h2 style="color: #ffcd00;">Heads or Tails?</h2>
+        <hr style="border: 1px solid #ffcd00;">
+        
+        <div id="coin" class="coin-box">?</div>
+        
+        <div id="result-display">Click to see which Three-Peat you win!</div>
+
+        <button class="flip-btn" onclick="flipCoin()">Flip the Ring</button>
+    </div>
+
+    <a href="hobby.html" class="back-link">← Back to Jordan Page</a>
+
+    <script>
+        function flipCoin() {
+            const coin = document.getElementById('coin');
+            const display = document.getElementById('result-display');
+            
+            // Add a spin effect
+            coin.style.transform = "rotateY(720deg)";
+            display.textContent = "Flipping...";
+
+            setTimeout(() => {
+                const isHeads = Math.random() < 0.5;
+                
+                // Reset rotation for next click
+                coin.style.transition = "none";
+                coin.style.transform = "rotateY(0deg)";
+                
+                setTimeout(() => {
+                    coin.style.transition = "transform 0.6s";
+                    if (isHeads) {
+                        coin.textContent = "23";
+                        display.textContent = "HEADS: The 1991-1993 Dynasty!";
+                    } else {
+                        coin.textContent = "45";
+                        display.textContent = "TAILS: The 1996-1998 Return!";
+                    }
+                }, 50);
+            }, 600);
+        }
+    </script>
+
+</body>
+</html>
+

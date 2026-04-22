@@ -1,0 +1,114 @@
+/* Background and Font Defaults */
+body {
+    background-color: #9e9797; /* The gray color from your screenshot */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #fff;
+}
+
+.main-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main-header h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Image Gallery Styling */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.image-gallery img {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Era Boxes */
+.era-box {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 15px; /* Rounded corners like your photo */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Requirement: Different colors for blocks */
+.bulls-red {
+    background-color: #ba0c2f; /* Bulls Red */
+}
+
+.bulls-black {
+    background-color: #231f20; /* Bulls Black */
+}
+
+.era-box h2 {
+    color: #ffcd00; /* Gold/Yellow titles */
+    margin-top: 0;
+}
+
+.era-box hr {
+    border: 0;
+    border-top: 1px solid #ffcd00;
+    margin: 15px 0;
+}
+
+/* Video Styling */
+.video-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.video-container {
+    margin-bottom: 20px;
+}
+
+iframe {
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Buttons */
+.nav-btn, .back-btn {
+    background-color: #28a745; /* Green button from your photo */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+/* Makes the Tableau box span across both columns in the grid */
+.full-width {
+    grid-column: 1 / -1;
+    background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+#viz-wrapper {
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 15px;
+    overflow: hidden; /* Clips the sharp corners of the Tableau viz to match your site */
+    border: 2px solid #000;
+}
+
+/* Ensures the actual graph doesn't get cut off */
+.tableauPlaceholder {
+    margin: 0 auto;
+}
